@@ -14,6 +14,10 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
 
   config.vm.provision :chef_solo do |chef|
     chef.cookbooks_path = ["./cookbooks", "./site-cookbooks"]
-    chef.run_list = %w(recipe[yum-epel] recipe[nginx])
+    chef.run_list = %w(
+      recipe[yum-epel]
+      recipe[nginx]
+      recipe[php-env]
+    )
   end
 end
