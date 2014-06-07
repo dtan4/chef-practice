@@ -74,5 +74,12 @@ http {
             include        fastcgi_params;
         }
         <% end %>
+
+        <% if node["nginx"]["env"].include?("ruby") %>
+        location /unicorn {
+            rewrite ^/unicorn/(.+) /$1 break;
+            proxy_pass http://unicorn/$1;
+        }
+        <% end %>
     }
 }
