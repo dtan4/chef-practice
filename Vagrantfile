@@ -17,6 +17,9 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
     chef.json = {
       nginx: {
         env: ["php", "ruby"]
+      },
+      mysql: {
+        server_root_password: "rootpass"
       }
     }
     chef.run_list = %w(
@@ -26,7 +29,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
       recipe[ruby-env]
       recipe[gpp]
       recipe[nodejs]
-      recipe[yum-update]
+      recipe[mysql]
     )
   end
 end
