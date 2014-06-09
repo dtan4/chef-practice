@@ -1,4 +1,6 @@
 DEPENDENCIES
+  analog
+    path: site-cookbooks/analog
   fluentd
     path: site-cookbooks/fluentd
   gpp
@@ -16,6 +18,7 @@ DEPENDENCIES
     path: site-cookbooks/yum-update
 
 GRAPH
+  analog (0.1.0)
   fluentd (0.1.0)
   gpp (0.1.0)
   nginx (0.1.0)
