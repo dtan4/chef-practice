@@ -10,6 +10,8 @@ DEPENDENCIES
   ruby-env
     path: site-cookbooks/ruby-env
   yum-epel
+  yum-update
+    path: site-cookbooks/yum-update
 
 GRAPH
   gpp (0.1.0)
@@ -20,3 +22,4 @@ GRAPH
   yum (3.2.0)
   yum-epel (0.3.6)
     yum (~> 3.0)
+  yum-update (0.1.0)

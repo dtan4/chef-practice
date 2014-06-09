@@ -26,6 +26,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
       recipe[ruby-env]
       recipe[gpp]
       recipe[nodejs]
+      recipe[yum-update]
     )
   end
 end
